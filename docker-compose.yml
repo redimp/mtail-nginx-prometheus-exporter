@@ -3,7 +3,7 @@ services:
   monitor:
     build: .
     restart: always
-    command: /var/log/nginx/access.log
+    command: /var/log/nginx/access_mtail.log
     ports:
         - "3093:3093"
     volumes:

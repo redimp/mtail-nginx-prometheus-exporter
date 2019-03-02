@@ -8,4 +8,4 @@ RUN wget -q -O /usr/local/bin/mtail https://github.com/google/mtail/releases/dow
 
 COPY progs/ /progs
 
-ENTRYPOINT ["/usr/local/bin/mtail", "-v=2", "-logtostderr", "-port", "3093", "-progs", "/progs", "-logs"]
+ENTRYPOINT ["/usr/local/bin/mtail", "-poll_interval", "1m", "-logtostderr", "-port", "3093", "-progs", "/progs", "-logs"]
