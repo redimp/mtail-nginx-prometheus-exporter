@@ -1,0 +1,12 @@
+version: '2'
+services:
+  monitor:
+    build: .
+    restart: always
+    command: /var/log/nginx/access.log
+    ports:
+        - "3093:3093"
+    volumes:
+        - /var/log/nginx/:/var/log/nginx:ro
+
+# vim:set et ts=2 sts=2 sw=2 ai fenc=utf-8:
